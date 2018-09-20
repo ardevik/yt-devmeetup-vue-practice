@@ -1,7 +1,8 @@
 # yt-devmeetup-vue
 
 > A dev meetup application built with Vue + Vuetify + Firebase
-> Practice from https://www.academind.com/learn/vue-js/a-comprehensive-project-with-vuetify-and-firebase/
+
+Practice from https://www.academind.com/learn/vue-js/a-comprehensive-project-with-vuetify-and-firebase/
 
 ## Build Setup
 
