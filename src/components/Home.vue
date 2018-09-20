@@ -15,6 +15,7 @@
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id">
+            <div class="titleself">{{meetup.title}}</div>
           </v-carousel-item>
         </v-carousel>
       </v-flex>
@@ -40,8 +41,9 @@ export default {
   .titleself {
     position: absolute;
     bottom: 50px;
+    left:50%;
+    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, .5);
-    text-align: center;
   }
 </style>
 
