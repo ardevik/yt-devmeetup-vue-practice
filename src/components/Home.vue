@@ -29,26 +29,41 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      meetups: [
-        {imageUrl: 'http://3tsll33cscvk11pae33oze51-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/jakarta-hidden-gems-travel.png', id: 'asdasgasasdfa', title: 'Meetup in Jakarta'},
-        {imageUrl: 'https://explorewisata.com/wp-content/uploads/2017/06/wisata-bandung.jpg', id: 'asdasgasasdfa', title: 'Meetup in Bandung'},
-        {imageUrl: 'https://cdn.idntimes.com/content-images/community/2018/05/surabaya-563208a10bae5-284a3da3c4964ff7cbd556970117db09_600x400.jpg', id: 'asdasgasasdfa', title: 'Meetup in Surabaya'}
-      ]
+  export default {
+    data () {
+      return {
+        meetups: [
+          {
+            imageUrl:
+              'http://3tsll33cscvk11pae33oze51-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/jakarta-hidden-gems-travel.png',
+            id: 'asdasgasasdfa',
+            title: 'Meetup in Jakarta'
+          },
+          {
+            imageUrl:
+              'https://explorewisata.com/wp-content/uploads/2017/06/wisata-bandung.jpg',
+            id: 'asdasgasasdfa',
+            title: 'Meetup in Bandung'
+          },
+          {
+            imageUrl:
+              'https://cdn.idntimes.com/content-images/community/2018/05/surabaya-563208a10bae5-284a3da3c4964ff7cbd556970117db09_600x400.jpg',
+            id: 'asdasgasasdfa',
+            title: 'Meetup in Surabaya'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped>
   .titleself {
     position: absolute;
     bottom: 50px;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 2em;
     padding: 20px;
