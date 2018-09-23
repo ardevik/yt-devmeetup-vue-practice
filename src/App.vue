@@ -32,6 +32,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
   export default {
     data () {
       return {
@@ -44,6 +45,19 @@
           { icon: 'lock_open', title: 'Sign in', link: '/signin' }
         ]
       }
+=======
+export default {
+  data () {
+    return {
+      sideNav: false,
+      menuItems: [
+        { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
+        { icon: 'room', title: 'Organize Meetup', link: '/meetup/new' },
+        { icon: 'person', title: 'Profile', link: '/profile' },
+        { icon: 'face', title: 'Sign up', link: '/signup' },
+        { icon: 'lock_open', title: 'Sign in', link: '/signin' }
+      ]
+>>>>>>> f3ee9272eda5e318c1b8d5dd008d393157f2564a
     }
   }
 </script>
