@@ -11,11 +11,7 @@
     <v-layout row wrap class="mt-2">
       <v-flex xs12>
         <v-carousel>
-          <v-carousel-item
-            v-for="meetup in meetups"
-            @click="onLoadMeetup(meetup.id)"
-            :src="meetup.imageUrl"
-            :key="meetup.id">
+          <v-carousel-item v-for="meetup in meetups" @click="onLoadMeetup(meetup.id)" :src="meetup.imageUrl" :key="meetup.id">
             <div class="titleself">{{meetup.title}}</div>
           </v-carousel-item>
         </v-carousel>
@@ -23,7 +19,7 @@
     </v-layout>
     <v-layout row wrap class="mt-2">
       <v-flex xs12 class="text-xs-center">
-        <p>Join  our awsome meetups!</p>
+        <p>Join our awsome meetups!</p>
       </v-flex>
     </v-layout>
   </v-container>
@@ -36,7 +32,7 @@
         return this.$store.getters.featuredMeetups
       }
     },
-  
+
     methods: {
       onLoadMeetup (id) {
         this.$router.push('/meetup/' + id)

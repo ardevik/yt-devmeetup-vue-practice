@@ -6,8 +6,7 @@
           <v-card-title>
             <h5 class="primary--text">{{meetup.title}}</h5>
           </v-card-title>
-          <v-img height="400px"
-            :src="meetup.imageUrl">
+          <v-img height="400px" :src="meetup.imageUrl">
           </v-img>
           <v-card-text>
             <div class="info--text">{{meetup.date}} - Where it takes place</div>
@@ -24,12 +23,12 @@
 </template>
 
 <script>
-export default {
-  props: ['id'],
-  computed: {
-    meetup () {
-      return this.$store.getters.loadedMeetup(this.id)
+  export default {
+    props: ['id'],
+    computed: {
+      meetup () {
+        return this.$store.getters.loadedMeetup(this.id)
+      }
     }
   }
-}
 </script>

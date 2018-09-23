@@ -6,8 +6,7 @@
           <v-container fluid>
             <v-layout row>
               <v-flex xs5 sm4 md3>
-                <v-img height="130px"
-                  :src="meetup.imageUrl">
+                <v-img height="130px" :src="meetup.imageUrl">
                 </v-img>
               </v-flex>
               <v-flex xs7 sm8 md9>
@@ -26,18 +25,18 @@
               </v-flex>
             </v-layout>
           </v-container>
-        </v-card>  
+        </v-card>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
-export default {
-  computed: {
-    meetups () {
-      return this.$store.getters.featuredMeetups
+  export default {
+    computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetups
+      }
     }
   }
-}
 </script>
