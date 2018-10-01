@@ -32,12 +32,11 @@ new Vue({
   render: h => h(App),
   created () {
     firebase.initializeApp({
-      apiKey: 'AIzaSyAR4ZK-VRp8w05-zdbFBDJi3AzWDbs_Ts8',
-      authDomain: 'ardevik-2414a.firebaseapp.com',
-      databaseURL: 'https://ardevik-2414a.firebaseio.com',
-      projectId: 'ardevik-2414a',
-      storageBucket: 'ardevik-2414a.appspot.com'
-
+      apiKey: '',
+      authDomain: '',
+      databaseURL: '',
+      projectId: '',
+      storageBucket: ''
     })
   }
 })
