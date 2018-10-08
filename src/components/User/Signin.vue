@@ -2,6 +2,7 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
+        <app-alert v-if="error" @dismissed="onDismissed" :text="error.message"></app-alert>
         <v-card>
           <v-card-text>
             <v-form @submit.prevent="onSignin">
@@ -43,6 +44,12 @@ export default {
   computed: {
     user () {
       return this.$store.getters.user
+    },
+    loading () {
+      return this.$store.getters.loading
+    },
+    error () {
+      return this.$store.getters.error
     }
   },
   watch: {
@@ -55,6 +62,9 @@ export default {
   methods: {
     onSignin () {
       this.$store.dispatch('signUserIn', {email: this.email, password: this.password})
+    },
+    onDismissed () {
+      this.$store.dispatch('clearError')
     }
   }
 }

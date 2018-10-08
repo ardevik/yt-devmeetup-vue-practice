@@ -9,15 +9,27 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap class="mt-2">
-      <v-flex xs12>
-        <v-carousel>
-          <v-carousel-item v-for="meetup in meetups" @click="onLoadMeetup(meetup.id)" :src="meetup.imageUrl" :key="meetup.id">
-            <div class="titleself">{{meetup.title}}</div>
+      <v-flex xs12 class="text-xs-center">
+        <v-progress-circular
+          indeterminate
+          class="primary--text"
+          :width="7"
+          :size="70"
+          v-if="loading"
+        ></v-progress-circular>
+        <v-carousel v-if="!loading">
+          <v-carousel-item
+            v-for="meetup in meetups"
+            @click="onLoadMeetup(meetup.id)"
+            :src="meetup.imageUrl"
+            :key="meetup.id"
+          >
+            <div class="titleself">{{ meetup.title }}</div>
           </v-carousel-item>
         </v-carousel>
       </v-flex>
     </v-layout>
-    <v-layout row wrap class="mt-2">
+    <v-layout row wrap="" class="mt-2">
       <v-flex xs12 class="text-xs-center">
         <p>Join our awsome meetups!</p>
       </v-flex>
@@ -30,6 +42,9 @@
     computed: {
       meetups () {
         return this.$store.getters.featuredMeetups
+      },
+      loading () {
+        return this.$store.getters.loading
       }
     },
 

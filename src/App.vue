@@ -21,7 +21,7 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-btn v-for="item in menuItems" :key="item.title" flat router :to="item.link">
           <v-icon left>{{item.icon}}</v-icon>
-            {{item.title}}
+          {{item.title}}
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -46,17 +46,62 @@
         ]
         if (this.userIsAuthenticated) {
           menuItems = [
-            { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups' },
-          { icon: 'room', title: 'Organize Meetup', link: '/meetup/new' },
-          { icon: 'person', title: 'Profile', link: '/profile' }
+            {
+              icon: 'supervisor_account',
+              title: 'View Meetups',
+              link: '/meetups'
+            },
+            { icon: 'room', title: 'Organize Meetup', link: '/meetup/new' },
+            { icon: 'person', title: 'Profile', link: '/profile' }
           ]
         }
         return menuItems
       },
       userIsAuthenticated () {
-        return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+        return (
+          this.$store.getters.user !== null &&
+          this.$store.getters.user !== undefined
+        )
       }
     }
   }
 </script>
- 
+
+<style>
+  .custom-loader {
+    animation: loader 1s infinite;
+    display: flex;
+  }
+  @-moz-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-o-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
